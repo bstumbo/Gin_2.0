@@ -1,0 +1,137 @@
+/* This document contains bootstrap style overrides */
+.jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  height: auto;
+  background-image: url(../images/Gin_Bar.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  
+}
+
+td {
+    
+    background-color: white;
+    
+}
+
+.white {
+    
+    background-color: white;
+    
+}
+
+.description {
+    
+    
+    color: white;
+    text-align: center;
+    
+}
+
+.description-2 {
+    
+    
+    color: black;
+    text-align: center;
+    
+}
+
+
+.div-admin {
+    
+    float: left;
+    margin-left: 10px;
+    width: 300px;
+    
+    
+}
+
+.div-admin-message {
+    
+    float: center;
+    font-size: 50px;
+    color: red;
+    position: aboslute;
+    
+    
+}
+
+/* Modal Styles */
+
+.gin_image {
+    
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 100%;
+    height: 100%;
+    max-width: 125px;
+    max-height: 235px;
+}
+
+.gin_tree {
+    
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-botom:10px;
+    width: 125px;
+    height: 125px;
+      
+}
+
+.div_gin_image {
+    
+    float: left;
+}
+
+.div_text {
+    
+    
+    margin-left: 10px;
+    min-width: 300px;
+    
+    
+}
+
+.h1_modal {
+    
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+.div_profile_title {
+    
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    width: 65px;
+    text-align: center;
+}
+
+.div_profile {
+    
+    color: white;
+    background-color: green !important;
+    font-size: 25px;
+    float: left;
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    border: 1px solid !important;
+    
+}
+
+.p_profile {
+    
+    margin-top: 20%;
+}
+
+.div_footer_stats {
+    
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    font-size: 15px;
+}
+
