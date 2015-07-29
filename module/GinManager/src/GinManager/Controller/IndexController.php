@@ -10,6 +10,7 @@
 namespace GinManager\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
+use GinManager\Models\Gin;
 use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
