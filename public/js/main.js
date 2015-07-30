@@ -1,5 +1,5 @@
 $(function() {
-$('form.ajax').on('submit', function() {
+$('form.form-horizontal').on('submit', function() {
 	var that = $(this),
             url = that.attr('action'),
             type = that.attr('method'),

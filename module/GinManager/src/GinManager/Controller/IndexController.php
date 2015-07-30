@@ -18,22 +18,28 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
+        
         $ginTable = $this->getServiceLocator()->get('GinManager\Tables\GinTable');
-        $results = $ginTable->fetchAll();
-        print count($results);
         
         $formManager = $this->serviceLocator->get('FormElementManager');
         $form = $formManager->get('GinManager\Forms\QueryGinForm');
         
-        return new ViewModel(array(
+        if (isset($_POST['submit'])) {
+    
+        
+        $results = $ginTable->ginQuery();
+        print count($results);
+       
+    } 
+         return new ViewModel(array(
             'form' => $form,
             'messages' => array(
                 'info' => $this->flashMessenger()->hasInfoMessages()
             )
         ));
         
-        
-    }
+        }
+    
     
     public function queryAction() {
         $formManger = $this->serviceLocator->get('FormElementManager');

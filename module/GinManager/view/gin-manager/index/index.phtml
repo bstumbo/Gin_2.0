@@ -44,11 +44,7 @@
             echo $this->formElementErrors($element);
             ?>
 			
-			 <?php
-            $element = $form->get('submit');
-            echo $this->formButton($element);
-            echo $this->formElementErrors($element);
-            ?>
+
         </div>
 		
 			</td>
@@ -95,7 +91,7 @@
 			
 			<?php
             $element = $form->get('submit');
-            echo $this->formButton($element);
+            echo $this->formSubmit($element);
             echo $this->formElementErrors($element);
             ?>
         
@@ -146,4 +142,3 @@
 	
 </div>
 
-<script src="js/main.js"></script> 

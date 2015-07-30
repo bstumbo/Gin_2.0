@@ -27,12 +27,12 @@ class GinTable {
     }
     
     public function ginQuery() {
-        $Juniper= $_POST['Juniper'];
+       
+        $Juniper = $_POST['Juniper'];
         $Citrus = $_POST['Citrus'];
         $Spice = $_POST['Spice'];
         $Herbal = $_POST['Herbal'];
         $Floral = $_POST['Floral'];
-        
         $where = new WherePredicate;
         
         $where -> equalTo('Juniper', $Juniper)
@@ -47,8 +47,10 @@ class GinTable {
                
          $select = $this->tableGateway->getSql()->select();
          $select->where($where);
-         
+        
         $results = $this->tableGateway->selectWith($select);
+        
+         return $results->buffer();
     }
     
 }
