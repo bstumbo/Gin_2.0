@@ -21,4 +21,15 @@ class Module
             ),
         );
     }
+    
+     public function getServiceConfig(){
+        return array(
+            'factories' => array(
+                'GinManager\Tables\GinTable' =>
+                'GinManager\Tables\Factories\GinTableFactory',
+                'GinManager\Tables\GinTableGateway' => 'GinManager\Tables\Factories\GinTableGatewayFactory'
+                
+            )
+        );
+    }
 }

@@ -17,6 +17,10 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        $ginTable = $this->getServiceLocator()->get('GinManager\Tables\GinTable');
+        $results = $ginTable->fetchAll();
+        print count($results);
+        
+        
     }
 }

@@ -85,26 +85,7 @@
 	</table>
 	
 	</div>
-	
-	  <?php
-        $form = $this->form;
-        $form->setAttribute('action', $this->url('gin'));
-        $form->setAttribute('class', 'form-horizontal');
-        $form->setAttribute('method', 'post');
-        $form->prepare();
-        echo $this->form()->openTag($form);
-        ?>
 		
-		<div class="form-group">
-            <?php
-            $element = $form->get('Juniper');
-            echo $this->formLabel($element);
-            echo $this->formText($element);
-            echo $this->formElementErrors($element);
-            ?>
-        </div>
-	
-	
 
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">

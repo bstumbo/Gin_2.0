@@ -33,11 +33,11 @@ class Gin {
         $this->herbal = (isset($data['Herbal'])) ? $data['Herbal'] : null;
         $this->floral = (isset($data['Floral'])) ? $data['Floral'] : null;
         $this->proof = (isset($data['Proof'])) ? $data['Proof'] : null;
-        $this->agee = (isset($data['Aged'])) ? $data['Aged'] : null;
+        $this->aged = (isset($data['Aged'])) ? $data['Aged'] : null;
         $this->tree = (isset($data['Tree'])) ? $data['Tree'] : null;
         $this->ginPriceOz = (isset($data['Price_per_oz'])) ? $data['Price_per_oz'] : null;
         $this->gindescription = (isset($data['Description'])) ? $data['Description'] : null;
-         $this->ginOrigin = (isset($data['Origin'])) ? $data['Origin'] : null;
+        $this->ginOrigin = (isset($data['Origin'])) ? $data['Origin'] : null;
     }
     
     
