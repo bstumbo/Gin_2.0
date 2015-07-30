@@ -22,69 +22,87 @@
 		
 		</table>
 		
-		<table align="center">
-			<tr>
-			<td>
-			
-			<form action="includes/profile_query.php" class="ajax" method="POST">
-				Juniper: <select name="Juniper" >
-				<option value="1">Light</option>
-				<option value="2">Medium</option>
-				<option value="3">Heavy</option>
-				</select>
-				<input type="submit" value="Submit">
-			</form>	
-				
-			</td>	
-				
-			</tr>
-		
-		</table>
-		
 
-	<table align="center">
+	</div>
+		
+		<table align="center">
 		<tr>
 			<td>
-	<form action="includes/profile_query.php" class="ajax" method="post" >
-				Citrus: <select name="Citrus" >
-				
-				<option value="0">Light</option>
-				<option value="1">Medium</option>
-				<option value="2">Heavy</option>
-				<option value="3">Extra Heavy</option>
-				</select>
-				Spice: <select name="Spice" >
-				
-				<option value="0">Light</option>
-				<option value="1">Medium</option>
-				<option value="2">Heavy</option>
-				<option value="3">Extra Heavy</option>
-				</select>
-				Herbal: <select name="Herbal" >
-				
-				<option value="0">Light</option>
-				<option value="1">Medium</option>
-				<option value="2">Heavy</option>
-				<option value="3">Extra Heavy</option>
-				</select>
-				Floral: <select name="Floral" >
-				
-				<option value="0">Light</option>
-				<option value="1">Medium</option>
-				<option value="2">Heavy</option>
-				<option value="3">Extra Heavy</option>
-				</select>
-
-				<input type="submit" value="Submit">
-				</form>
-	
-			</td>
+		  <?php
+        $form = $this->form;
+        #$form->setAttribute('action', $this->url('video/manage'));
+        $form->setAttribute('class', 'form-horizontal');
+        $form->setAttribute('method', 'post');
+        $form->prepare();
+        echo $this->form()->openTag($form);
+        ?>
+        <div class="form-group">
+            <?php
+            $element = $form->get('Juniper');
+            echo $this->formLabel($element);
+            echo $this->formSelect($element);
+            echo $this->formElementErrors($element);
+            ?>
 			
-
+			 <?php
+            $element = $form->get('submit');
+            echo $this->formButton($element);
+            echo $this->formElementErrors($element);
+            ?>
+        </div>
+		
+			</td>
 		</tr>
 	</table>
+		
+		<table align="center">
+		<tr>
+			<td>
+		
+            <?php
+            $element = $form->get('Citrus');
+            echo $this->formLabel($element);
+            echo $this->formSelect($element);
+            echo $this->formElementErrors($element);
+            ?>
+      
+		
 	
-	</div>
+            <?php
+            $element = $form->get('Spice');
+            echo $this->formLabel($element);
+            echo $this->formSelect($element);
+            echo $this->formElementErrors($element);
+            ?>
+    
+		
+
+            <?php
+            $element = $form->get('Herbal');
+            echo $this->formLabel($element);
+            echo $this->formSelect($element);
+            echo $this->formElementErrors($element);
+            ?>
+    
+		
+	
+            <?php
+            $element = $form->get('Floral');
+            echo $this->formLabel($element);
+            echo $this->formSelect($element);
+            echo $this->formElementErrors($element);
+            ?>
+			
+			<?php
+            $element = $form->get('submit');
+            echo $this->formButton($element);
+            echo $this->formElementErrors($element);
+            ?>
+        
+			</td>
+		</tr>
+		</table>
+		
 		
 
 	<div class="row">

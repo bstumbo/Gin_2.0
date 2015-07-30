@@ -12,6 +12,7 @@ namespace GinManager\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use GinManager\Models\Gin;
 use Zend\View\Model\ViewModel;
+use GinManager\Tables\GinTable;
 
 class IndexController extends AbstractActionController
 {
@@ -21,6 +22,24 @@ class IndexController extends AbstractActionController
         $results = $ginTable->fetchAll();
         print count($results);
         
+        $formManager = $this->serviceLocator->get('FormElementManager');
+        $form = $formManager->get('GinManager\Forms\QueryGinForm');
+        
+        return new ViewModel(array(
+            'form' => $form,
+            'messages' => array(
+                'info' => $this->flashMessenger()->hasInfoMessages()
+            )
+        ));
+        
+        
+    }
+    
+    public function queryAction() {
+        $formManger = $this->serviceLocator->get('FormElementManager');
+        $form = $formManager->get('GinManager\Forms\QueryGinForm');
+        
+       
         
     }
 }
