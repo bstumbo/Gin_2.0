@@ -16,7 +16,7 @@ class QueryGinForm extends Form
 
     public function init()
     {
-        $this->setAttribute('method', 'post');
+        
         /*$this->setAttribute('class', 'form-horizontal')
              ->setAttribute('action', '/video/manage');*/
 
@@ -102,7 +102,7 @@ class QueryGinForm extends Form
 
         $this->add(array(
             'name' => 'submit',
-            'type' => 'Zend\Form\Element\Button',
+            'type' => 'Zend\Form\Element\Submit',
             'options' => array(
                 'label' => 'Sumbit'
             ),

@@ -1,5 +1,5 @@
 $(function() {
-$('form.form-horizontal').on('submit', function() {
+$('form.ajax').on('submit', function() {
 	var that = $(this),
             url = that.attr('action'),
             type = that.attr('method'),
@@ -10,7 +10,9 @@ $('form.form-horizontal').on('submit', function() {
                     name =  that.attr('name'),
                     value = that.val();
 
-                data[name] = value;            
+                data[name] = value;
+				
+				
             });
 		
              $.ajax ({

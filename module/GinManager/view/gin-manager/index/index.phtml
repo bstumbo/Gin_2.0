@@ -30,75 +30,71 @@
 			<td>
 		  <?php
         $form = $this->form;
-        #$form->setAttribute('action', $this->url('video/manage'));
-        $form->setAttribute('class', 'form-horizontal');
+        $form->setAttribute('action', $this->url('gin/query'));
+        $form->setAttribute('class', 'ajax');
         $form->setAttribute('method', 'post');
         $form->prepare();
         echo $this->form()->openTag($form);
         ?>
-        <div class="form-group">
+     <div class="form-group">
             <?php
             $element = $form->get('Juniper');
             echo $this->formLabel($element);
             echo $this->formSelect($element);
             echo $this->formElementErrors($element);
             ?>
-			
-
-        </div>
+		</div>
 		
-			</td>
-		</tr>
-	</table>
-		
-		<table align="center">
-		<tr>
-			<td>
-		
+	 <div class="form-group">
             <?php
             $element = $form->get('Citrus');
             echo $this->formLabel($element);
             echo $this->formSelect($element);
             echo $this->formElementErrors($element);
             ?>
-      
+		</div>
 		
-	
+	 <div class="form-group">
             <?php
             $element = $form->get('Spice');
             echo $this->formLabel($element);
             echo $this->formSelect($element);
             echo $this->formElementErrors($element);
             ?>
-    
-		
+	 </div>
 
+ <div class="form-group">
             <?php
             $element = $form->get('Herbal');
             echo $this->formLabel($element);
             echo $this->formSelect($element);
             echo $this->formElementErrors($element);
             ?>
-    
-		
-	
+ </div>
+
+	 <div class="form-group">
             <?php
             $element = $form->get('Floral');
             echo $this->formLabel($element);
             echo $this->formSelect($element);
             echo $this->formElementErrors($element);
             ?>
-			
+	 </div>
+		
+	 <div class="form-group">
 			<?php
             $element = $form->get('submit');
             echo $this->formSubmit($element);
             echo $this->formElementErrors($element);
             ?>
-        
+    </div>
+	 
+	 	<?php echo $this->form()->closeTag(); ?>
 			</td>
 		</tr>
 		</table>
-		
+	
+	
 		
 
 	<div class="row">

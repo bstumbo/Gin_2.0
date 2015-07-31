@@ -38,6 +38,16 @@ return array(
                             ),
                         ),
                     ),
+                'query' => array(
+                        'type' => 'segment',
+                        'options' => array(
+                            'route' => '/query',
+                            'defaults' => array(
+                                'action' => 'query',
+                            )
+                        ),
+                        'may_terminate' => true,
+                    )
                 ),
             ),
         ),
@@ -68,12 +78,17 @@ return array(
     ),
     'view_manager' => array(
         'template_map' => array(
-            'gin' => __DIR__ . '/../view/ginapp/index.phtml',
-            'layout/layout'           => __DIR__ . '/../view/layouts/gin-layout.phtml',
+        'gin' => __DIR__ . '/../view/layouts/gin-layout.phtml',
+        'query' => __DIR__ . '/../view/layouts/query-layout.phtml',
+        'layout/layout'           => __DIR__ . '/../view/layouts/gin-layout.phtml',
+        
         ),
         'template_path_stack' => array(
-            __DIR__ . '/../view',
+          'gin' =>  __DIR__ . '/../view',
         ),
+        'strategies' => array (
+            'ViewJsonStrategy'
+        )
     ),
     // Placeholder for console routes
     'console' => array(
