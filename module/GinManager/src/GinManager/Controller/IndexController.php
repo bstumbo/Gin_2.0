@@ -36,6 +36,8 @@ class IndexController extends AbstractActionController
     
     public function queryAction() {
         
+        $this->layout('query');
+        
         $ginTable = $this->getServiceLocator()->get('GinManager\Tables\GinTable');
         
         $formManager = $this->serviceLocator->get('FormElementManager');
@@ -44,7 +46,8 @@ class IndexController extends AbstractActionController
          if (isset($_POST['submit'])) {
      
         $results = $ginTable->ginQuery();
-        print count($results);
+    
+        return $results;
        
     } 
         

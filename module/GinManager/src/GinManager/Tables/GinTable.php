@@ -49,8 +49,31 @@ class GinTable {
          $select->where($where);
         
         $results = $this->tableGateway->selectWith($select);
+        $num_results = count($results);
         
-         return $results->buffer();
+         if ($num_results < 1){
+           
+           $message = "<p class=\"description\">This flavor profile hasn't been developed yet. You should make it!</p>";
+           
+        echo $message;
+            
+        } else {
+        
+	foreach ($results as $data) {	
+         
+         $gin = new Gin($ginID);
+		 
+		print (string)$gin;
+
+         
+     # echo  "<tr id=\"tbl-row\" data-toggle=\"modal\" data-id=" . $ginId . " data-target=\"#myModal\" ><td>" . "<img src=" . $ginThumb . "style=\"width:100px; height:100px;\" />" . "</td><td>"  . $ginName . "</td><td>" . $ginBrand . "</td></tr>";
+         
+     }
+        
+        
     }
+
     
+}
+
 }
