@@ -27,13 +27,13 @@ class GinTable {
     }
     
     public function ginQuery() {
-       
-        $Juniper = $_POST['Juniper'];
+		$Juniper = $_POST['Juniper'];
         $Citrus = $_POST['Citrus'];
         $Spice = $_POST['Spice'];
         $Herbal = $_POST['Herbal'];
         $Floral = $_POST['Floral'];
-        $where = new WherePredicate;
+        
+		$where = new WherePredicate;
         
         $where -> equalTo('Juniper', $Juniper)
                ->  AND
@@ -58,16 +58,9 @@ class GinTable {
         echo $message;
             
         } else {
-        
-	foreach ($results as $data) {	
-         
-         $gin = new Gin($ginID);
-		 
-		print (string)$gin;
-
-         
-     # echo  "<tr id=\"tbl-row\" data-toggle=\"modal\" data-id=" . $ginId . " data-target=\"#myModal\" ><td>" . "<img src=" . $ginThumb . "style=\"width:100px; height:100px;\" />" . "</td><td>"  . $ginName . "</td><td>" . $ginBrand . "</td></tr>";
-         
+			
+			return $results;
+		
      }
         
         
@@ -76,4 +69,3 @@ class GinTable {
     
 }
 
-}

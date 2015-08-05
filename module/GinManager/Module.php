@@ -3,6 +3,10 @@
 namespace GinManager;
 
 use Zend\ModuleManager\ModuleManager;
+use GinManager\Models\Gin;
+use GinManager\Tables\GinTable;
+use Zend\Db\ResultSet\ResultSet;
+use Zend\Db\TableGateway\TableGateway;
 
 class Module
 {
@@ -22,7 +26,7 @@ class Module
         );
     }
     
-     public function getServiceConfig(){
+      public function getServiceConfig(){
         return array(
             'factories' => array(
                 'GinManager\Tables\GinTable' =>

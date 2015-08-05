@@ -1,2 +1,18 @@
 <?php
+
+foreach ($gins as $gin) :
+
+ ?>
+<tr id="tbl-row" data-toggle="modal" data-id="<?php echo $this->escapeHtml($gin->ginId);?>" data-target="#myModal" >
+  <td> <img src="<?php echo $this->escapeHtml($gin->ginThumb);?> "style="width:100px; height:100px;" /></td>
+  <td><?php echo $this->escapeHtml($gin->ginName); ?></td>
+  <td><?php echo $this->escapeHtml($gin->ginBrand); ?></td>
+
+</tr>
+
+<?php endforeach; ?>
+
+  
+
+
   

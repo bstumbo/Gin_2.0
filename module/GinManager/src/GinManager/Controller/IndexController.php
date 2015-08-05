@@ -16,6 +16,9 @@ use GinManager\Tables\GinTable;
 
 class IndexController extends AbstractActionController
 {
+
+    protected $ginTable;
+    
     public function indexAction()
     {
         
@@ -38,20 +41,18 @@ class IndexController extends AbstractActionController
         
         $this->layout('query');
         
-        $ginTable = $this->getServiceLocator()->get('GinManager\Tables\GinTable');
-        
         $formManager = $this->serviceLocator->get('FormElementManager');
         $form = $formManager->get('GinManager\Forms\QueryGinForm');
         
          if (isset($_POST['submit'])) {
-     
+        
+         $ginTable = $this->getServiceLocator()->get('GinManager\Tables\GinTable');
         $results = $ginTable->ginQuery();
-    
-        return $results;
+              
+       return new ViewModel(array('gins' => $results,));
        
+     
     } 
-        
        
-        
-    }
+}
 }

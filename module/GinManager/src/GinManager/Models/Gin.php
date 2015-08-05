@@ -7,6 +7,7 @@ class Gin {
     public $ginId;
     public $ginName;
     public $ginType;
+    public $ginBrand;
     public $ginImage;
     public $ginThumb;
     public $juniper;
@@ -25,6 +26,7 @@ class Gin {
         $this->ginId = (isset($data['gin_key'])) ? $data['gin_key'] : null;
         $this->ginType = (isset($data['gin_type'])) ? $data['gin_type'] : null;
         $this->ginName = (isset($data['gin_name'])) ? $data['gin_name'] : null;
+        $this->ginBrand = (isset($data['brand'])) ? $data['brand'] : null;
         $this->ginImage = (isset($data['gin_image'])) ? $data['gin_image'] : null;
         $this->ginThumb = (isset($data['gin_thumbnail'])) ? $data['gin_thumbnail'] : null;
         $this->juniper = (isset($data['Juniper'])) ? $data['Juniper'] : null;
