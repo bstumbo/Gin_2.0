@@ -44,12 +44,14 @@ class IndexController extends AbstractActionController
         $formManager = $this->serviceLocator->get('FormElementManager');
         $form = $formManager->get('GinManager\Forms\QueryGinForm');
         
-         if (isset($_POST['submit'])) {
         
-         $ginTable = $this->getServiceLocator()->get('GinManager\Tables\GinTable');
+    if (isset($_POST['submit'])) {
+        
+        
+        $ginTable = $this->getServiceLocator()->get('GinManager\Tables\GinTable');
         $results = $ginTable->ginQuery();
               
-       return new ViewModel(array('gins' => $results,));
+        return new ViewModel(array('gins' => $results,));
        
      
     } 

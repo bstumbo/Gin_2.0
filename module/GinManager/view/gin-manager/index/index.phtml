@@ -5,29 +5,10 @@
 </div>
 
 <div class="container">
-	<div class="row">
-	
-		<table align="center">
-			
-			<td>
-			
-			<form action="includes/profile_query.php" class="ajax" method="POST">
-				<input type="text" name="Search">
-				<input type="submit" value="Search">
-			</form>	
-				
-			</td>	
-				
-			</tr>
 		
-		</table>
-		
-
-	</div>
-		
-		<table align="center">
-		<tr>
-			<td>
+<table align="center">
+	<tr>
+	<td style="width: 500px;">
 		  <?php
         $form = $this->form;
         $form->setAttribute('action', $this->url('gin/query'));
@@ -36,51 +17,54 @@
         $form->prepare();
         echo $this->form()->openTag($form);
         ?>
-     <div class="form-group">
-            <?php
-            $element = $form->get('Juniper');
-            echo $this->formLabel($element);
-            echo $this->formSelect($element);
-            echo $this->formElementErrors($element);
-            ?>
-		</div>
+			<div class="form-group"  style="display: inline;">
+				<?php
+				$element = $form->get('Juniper');
+				echo $this->formLabel($element);
+				echo $this->formSelect($element);
+				echo $this->formElementErrors($element);
+				?>
+			</div>
 		
-	 <div class="form-group">
-            <?php
-            $element = $form->get('Citrus');
-            echo $this->formLabel($element);
-            echo $this->formSelect($element);
-            echo $this->formElementErrors($element);
-            ?>
-		</div>
+		<div data-role="collapsible">
+			<h4>Advanced</h4>
+			<div class="form-group"  style="display: inline; float:left;">
+				<?php
+				$element = $form->get('Citrus');
+				echo $this->formLabel($element);
+				echo $this->formSelect($element);
+				echo $this->formElementErrors($element);
+				?>
+			</div>
+	
 		
-	 <div class="form-group">
+			<div class="form-group"  style="display: inline; float:left;">
             <?php
             $element = $form->get('Spice');
             echo $this->formLabel($element);
             echo $this->formSelect($element);
             echo $this->formElementErrors($element);
             ?>
-	 </div>
-
- <div class="form-group">
+			</div>
+		
+			<div class="form-group"  style="display: inline; float: left;">
             <?php
             $element = $form->get('Herbal');
             echo $this->formLabel($element);
             echo $this->formSelect($element);
             echo $this->formElementErrors($element);
             ?>
- </div>
-
-	 <div class="form-group">
+			</div>
+		
+			<div class="form-group"  style="display: inline; float: left;">
             <?php
             $element = $form->get('Floral');
             echo $this->formLabel($element);
             echo $this->formSelect($element);
             echo $this->formElementErrors($element);
             ?>
-	 </div>
-		
+			</div>
+		</div>
 	 <div class="form-group">
 			<?php
             $element = $form->get('submit');
@@ -88,11 +72,11 @@
             echo $this->formElementErrors($element);
             ?>
     </div>
-	 
-	 	<?php echo $this->form()->closeTag(); ?>
-			</td>
-		</tr>
-		</table>
+	
+			<?php echo $this->form()->closeTag(); ?>
+	</td>
+	</tr>	
+	</table>
 	
 	
 		
