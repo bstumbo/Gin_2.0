@@ -52,9 +52,21 @@ class IndexController extends AbstractActionController
         $results = $ginTable->ginQuery();
               
         return new ViewModel(array('gins' => $results,));
+        
+        } 
        
-     
-    } 
+    }
+    
+    public function indiAction() {
+        
+        $this->layout('indi');
        
-}
+        if (isset($_POST['tbl-row'])){
+            
+            $ginTable = $this->getServiceLocator()->get('GinManager\Tables\GinTable');
+            $results = $ginTable->indiQuery();
+            
+            return new ViewModel(array('gin_indi' => $results,));
+        }
+    }
 }

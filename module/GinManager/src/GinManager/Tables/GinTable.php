@@ -14,18 +14,9 @@ class GinTable {
         $this->tableGateway = $tableGateway;
         
     }
-    
-    public function fetchAll()
-    {
-        $select = $this->tableGateway->getSql()->select();
-        $select->where(array(
-           'Juniper' => '1' 
-        ));
-        $results = $this->tableGateway->selectWith($select);
-
-        return $results->buffer();
-    }
-    
+	
+	//Query for Juniper and Citrus/Spice/Herbal/Floral
+        
     public function ginQuery() {
 		
 		$Juniper = $_POST['Juniper'];
@@ -43,8 +34,7 @@ class GinTable {
 	   } else  {
 		
 		$Citrus = array(0, 1, 2, 3);
-		
-		
+	
 	   }
 	   
 	   if ($_POST['Spice'] < 4) {
@@ -54,8 +44,7 @@ class GinTable {
 	   } else  {
 		
 		$Spice = array(0, 1, 2, 3);
-
-		
+	
 	   }
 	   
 	    if ($_POST['Herbal'] < 4) {
@@ -106,11 +95,27 @@ class GinTable {
 			
 			return $results;
 		
-     }
+		}
         
         
     }
-
+	
+	public function indiQuery() {
+		
+		$gindata = $_POST['tbl-row'];
+		
+		$where = new WherePredicate;
+        
+		$where -> equalTo('gin_key', $gindata);
+		
+		$select = $this->tableGateway->getSql()->select();
+        $select->where($where);
+        
+        $results = $this->tableGateway->selectWith($select);
+		
+		return $results;
+			
+	}
     
 }
 

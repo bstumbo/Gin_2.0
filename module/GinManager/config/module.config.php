@@ -47,6 +47,16 @@ return array(
                             )
                         ),
                         'may_terminate' => true,
+                    ),
+                'indi' => array(
+                        'type' => 'segment',
+                        'options' => array(
+                            'route' => '/indi',
+                            'defaults' => array(
+                                'action' => 'indi',
+                            )
+                        ),
+                        'may_terminate' => true,
                     )
                 ),
             ),
@@ -79,6 +89,7 @@ return array(
     'view_manager' => array(
         'template_map' => array(
         'gin' => __DIR__ . '/../view/layouts/gin-layout.phtml',
+        'indi' => __DIR__ . '/../view/layouts/query-layout.phtml',
         'query' => __DIR__ . '/../view/layouts/query-layout.phtml',
         'layout/layout'           => __DIR__ . '/../view/layouts/gin-layout.phtml',
         

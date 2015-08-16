@@ -1,0 +1,59 @@
+<?php foreach ($gin_indi as $gin) : ?>
+			<div id="gins">
+			<div class="div_gin_image">
+				<img src="<?php echo $this->escapeHtml($gin->ginImage);?>" class="gin_image"><br>
+				<img src="<?php echo $this->escapeHtml($gin->tree);?>" class="gin_tree">
+			</div>
+			<div class="div_text">
+				<h1 class="h1_modal"><?php echo $this->escapeHtml($gin->ginName); ?></h1>
+				<strong>Description:</strong> <?php echo $this->escapeHtml($gin->gindescription); ?>    
+			</div>
+			
+			<div class="div_profile_title">
+			 <strong>Juniper</strong>
+			<div class="div_profile">
+				<p class="p_profile"><?php echo $this->escapeHtml($gin->juniper); ?></p>
+			</div>
+			</div>
+		  
+			 <div class="div_profile_title">
+			 <strong>Citrus</strong>
+			<div class="div_profile">
+				<p class="p_profile"><?php echo $this->escapeHtml($gin->citrus); ?></p>
+			</div>
+			</div>
+			
+			 <div class="div_profile_title">
+			 <strong>Spice</strong>
+			<div class="div_profile">
+				<p class="p_profile"><?php echo $this->escapeHtml($gin->spice); ?></p>
+			</div>
+			</div>
+			
+			 <div class="div_profile_title">
+			 <strong>Herbal</strong>
+			<div class="div_profile">
+				<p class="p_profile"><?php echo $this->escapeHtml($gin->herbal); ?> </p>
+			</div>
+			</div>
+			
+			 <div class="div_profile_title">
+			 <strong>Floral</strong>
+			<div class="div_profile">
+				<p class="p_profile"><?php echo $this->escapeHtml($gin->floral); ?></p>
+			<br>
+			</div>
+			</div>
+			<div style="clear:both; float:left;" data-ginid="<?php echo $this->escapeHtml($gin->ginId); ?>"  class="rateit">Rate this gin: 
+			</div>
+			<div style="clear: left;"></div>
+			
+		  
+			
+			 <div class="div_footer_stats"><strong>Proof:</strong><?php echo $this->escapeHtml($gin->proof); ?> </div>
+			<div class="div_footer_stats"><strong>Brand:</strong><?php echo $this->escapeHtml($gin->ginBrand); ?> </div>
+			<div class="div_footer_stats"><strong>Origin:</strong><?php echo $this->escapeHtml($gin->ginOrigin); ?> </div>
+			</div>
+			</div>
+	
+	<?php endforeach; ?>

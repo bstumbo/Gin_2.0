@@ -48,7 +48,7 @@ $(document).on('click', '#gindata tr', function(){
 	$.ajax({
 	type: 'POST',
 	data: data,
-	url : 'includes/profile_query.php',
+	url : 'gin/indi',
 	success: function(response) { 
 		$('#gin_details').html(response) }
 	
